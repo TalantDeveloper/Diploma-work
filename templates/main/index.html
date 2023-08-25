@@ -1,0 +1,161 @@
+{% extends 'base.html' %}
+{% block content %}
+    <div class="row mt-2">
+        <!-- Column large 9. short, context, languages and categories for Words-->
+        <div class="col-lg-9 col-md-9 col-sm-9">
+            {% for word in word_list %}
+                <a href="{% url 'short' word.short.name %}" class="contexts-link">
+                    <div class="card context-card bg-light text-dark"
+                         style="margin-bottom: 10px; border: 1px solid black; background: #fefbd8;">
+                        <div class="card-body" style="padding-bottom: 10px;">
+                            <!-- Word short and context -->
+                            <h1 class="card-title pb-2">
+                                {{ word.short }} - {{ word.context }}
+                            </h1>
+                            <!-- Word categories and language -->
+                            <h3 class="card-text fw-bold">
+                                <!-- Word Language -->
+                                <div class="btn-group" role="group" aria-label="Basic example">
+                                    <button type="button" class="btn active fw-bold" style="background-color: #ddd;">
+                                        Language
+                                    </button>
+                                    <button type="button"
+                                            class="btn btn-outline-secondary fw-bold"
+                                            style="color: black;">{{ word.language }}</button>
+                                </div>
+                                <!-- Word Categories -->
+                                <div class="btn-group" role="group" aria-label="Basic example">
+                                    <button type="button" class="btn active fw-bold" style="background-color: #ddd;">
+                                        Category
+                                    </button>
+                                    {% for category in word.categories.all %}
+                                        <button type="button"
+                                                class="btn btn-outline-secondary fw-bold"
+                                                style="color: black;">{{ category }}</button>
+                                    {% endfor %}
+                                </div>
+                            </h3>
+                        </div>
+                    </div>
+                </a>
+            {% endfor %}
+            <!-- Pagination  -->
+            <nav aria-label="Page navigation example">
+                {% if word_list.has_other_pages %}
+                    <ul class="pagination justify-content-center pagination-lg">
+                        {% if word_list.has_previous %}
+                            <li class="page-item"><a class="page-link" href="?page=1">1</a></li>
+                        {% endif %}
+                        {% if word_list.number|add:'-2' > 1 %}
+                            <li class="page-item">
+                                <a class="page-link" href="">&hellip;</a>
+                            </li>
+                            <li class="page-item">
+                                <a class="page-link" href="?page={{ word_list.number|add:'-2' }}">
+                                    {{ word_list.number|add:'-2' }}
+                                </a>
+                            </li>
+                        {% endif %}
+
+                        <!-- pagedan bitta orqa -->
+                        {% if word_list.number|add:'-1' > 1 %}
+                            <!-- pagedan ikkita orqa bo'lmasa ... chiqishi -->
+                            {% if not word_list.number|add:'-2' > 1 %}
+                                <li class="page-item">
+                                    <a class="page-link" href="">&hellip;</a>
+                                </li>
+                            {% endif %}
+                            <li class="page-item">
+                                <a class="page-link" href="?page={{ word_list.number|add:'-1' }}">
+                                    {{ word_list.number|add:'-1' }}
+                                </a>
+                            </li>
+                        {% endif %}
+
+                        <!-- page number -->
+                        <li class="page-item">
+                            <a class="page-link active" href="?page={{ word_list.number }}">
+                                {{ word_list.number }}
+                            </a>
+                        </li>
+
+                        <!-- Pagedan bitta keyingi -->
+                        {% if word_list.has_next %}
+                            <!-- Pagedan ikkita keyingi bo'lmasa ... chiqarish -->
+{#                            {% if not word_list.number|add:'1' < word_list.paginator.num_pages %}#}
+{#                                <li class="page-item">#}
+{#                                    <a class="page-link" href="">&hellip;</a>#}
+{#                                </li>#}
+{#                            {% endif %}#}
+                            <li class="page-item">
+                                <a class="page-link" href="?page={{ word_list.number|add:'1' }}">
+                                    {{ word_list.number|add:'1' }}
+                                </a>
+                            </li>
+
+
+                        {% endif %}
+
+                        <!-- Pagedan ikkita keyingi bo'lsa -->
+                        {% if word_list.number|add:'2' < word_list.paginator.num_pages %}
+                            <li class="page-item">
+                                <a class="page-link" href="?page={{ word_list.number|add:'2' }}">
+                                    {{ word_list.number|add:'2' }}
+                                </a>
+                            </li>
+                            <li class="page-item">
+                                <a class="page-link" href="">&hellip;</a>
+                            </li>
+
+                        {% endif %}
+                        {% if word_list.number|add:'1' != word_list.paginator.num_pages %}
+                            <li class="page-item">
+                                <a class="page-link" href="?page={{ word_list.paginator.num_pages }}">
+                                    {{ word_list.paginator.num_pages }}
+                                </a>
+                            </li>
+                        {% endif %}
+                    </ul>
+                {% endif %}
+            </nav>
+        </div>
+        <!-- Column large 3. Categories and Languages-->
+        <div class="col-lg-3 col-md-3 col-sm-3">
+            <div class="card text-center bg-light text-dark" style="border: 1px solid black;">
+                <!-- Categories -->
+                <div class="card-header">
+                    <h4><a href="/" style="text-decoration: none; color: black;">Categories</a></h4>
+                </div>
+                <div class="card-body m-1">
+                    {% for categor in categories %}
+                        <h5>
+
+                            <a href="{% url 'category' categor.id %}" class="btn btn-outline-secondary fs-5 fw-bold"
+                               style="width: 100%; border: 1px solid black; color: black;">
+                                {{ categor }}
+                            </a>
+
+                        </h5>
+                    {% endfor %}
+                </div>
+                <!-- Languages -->
+                <div class="card-header" style="border-top: 1px solid black; border-bottom: 1px solid black;">
+                    <h4>
+                        <a href="/" style="text-decoration: none; color: black;">Languages</a>
+                    </h4>
+                </div>
+                <div class="card-body m-0">
+                    {% for languag in languages %}
+                        <h5>
+                            <a href="{% url 'language' languag.id %}"
+                               class="btn {% if languag.id == language.id %} btn-secondary {% else %} btn-outline-secondary {% endif %} fs-5 fw-bold"
+                               style="width: 100%; border: 1px solid black; color: black;">
+                                {{ languag }}
+                            </a>
+                        </h5>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock content %}

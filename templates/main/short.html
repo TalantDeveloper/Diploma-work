@@ -1,0 +1,108 @@
+{% extends 'base.html' %}
+{% block content %}
+    <style>
+        a .card:hover{
+            background-color: #eee;
+        }
+    </style>
+    <div class="row mt-2">
+        <!-- Column large 9. short, context, languages and categories for Words-->
+        <div class="col-lg-9 col-md-9 col-sm-9">
+            {% for word in words %}
+                <div class="card context-card" style="margin-bottom: 10px; border: 1px solid black;">
+                    <div class="card-body" style="padding-bottom: 10px;">
+                        <!-- Word short and context -->
+                        <h1 class="card-title pb-2">
+                            {{ word.short }} - {{ word.context }}
+                        </h1>
+                        <!-- Word categories and language -->
+                        <h3 class="card-text fw-bold">
+                            <!-- Word Language -->
+                            <div class="btn-group" role="group" aria-label="Basic example">
+                                <button type="button" class="btn active fw-bold" style="background-color: #ddd;">
+                                    Language
+                                </button>
+                                <button type="button" class="btn btn-outline-secondary fw-bold"
+                                        style="color: black;">{{ word.language }}</button>
+                            </div>
+                            <!-- Word Categories -->
+                            <div class="btn-group" role="group" aria-label="Basic example">
+                                <button type="button" class="btn active fw-bold" style="background-color: #ddd;">
+                                    Category
+                                </button>
+                                {% for category in word.categories.all %}
+                                    <button type="button"
+                                            class="btn btn-outline-secondary fw-bold"
+                                            style="color: black;">{{ category }}</button>
+                                {% endfor %}
+                            </div>
+                        </h3>
+                        <!-- Word Description -->
+                        <div style="padding-left: 20px;">
+                            <hr>
+                            <p class="card-body">
+                                {{ word.description| safe }}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+        <!-- Column large 3. Categories and Languages-->
+        <div class="col-lg-3 col-md-3 col-sm-3">
+            <div class="card text-center bg-light text-dark" style="border: 1px solid black;">
+                <!-- Categories -->
+                <div class="card-header">
+                    <h4><a href="/" style="text-decoration: none; color: black;">Categories</a></h4>
+                </div>
+                <div class="card-body m-1">
+                    {% for categor in categories %}
+                        <h5>
+
+                            <a href="{% url 'category' categor.id %}" class="btn btn-outline-secondary fs-5 fw-bold"
+                               style="width: 100%; border: 1px solid black; color: black;">
+                                {{ categor }}
+                            </a>
+
+                        </h5>
+                    {% endfor %}
+                </div>
+                <!-- Languages -->
+                <div class="card-header" style="border-top: 1px solid black; border-bottom: 1px solid black;">
+                    <h4>
+                        <a href="/" style="text-decoration: none; color: black;">Languages</a>
+                    </h4>
+                </div>
+                <div class="card-body m-0">
+                    {% for languag in languages %}
+                        <h5>
+                            <a href="{% url 'language' languag.id %}"
+                               class="btn {% if languag.id == language.id %} btn-secondary {% else %} btn-outline-secondary {% endif %} fs-5 fw-bold"
+                               style="width: 100%; border: 1px solid black; color: black;">
+                                {{ languag }}
+                            </a>
+                        </h5>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Mini cards  -->
+    <div class="" style="padding: 10px;">
+        <div class="row">
+            {% for word in word_list %}
+                <div class="col-sm-3 mb-3 mb-sm-0">
+                    <a href="{% url 'short' word.short %}" style="text-decoration: none;">
+                        <div class="card" style="border: 1px solid black;">
+                            <div class="card-body">
+                                <h5 class="card-title">{{ word.short }}</h5>
+                                <p class="card-text">{{ word.context }}</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+    <br>
+{% endblock %}

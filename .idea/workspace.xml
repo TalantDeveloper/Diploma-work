@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="5a584a5d-5cd2-4457-86cd-14ba258bdc9e" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+        <option value="CSS File" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2NQF7MdDtXexDwe1iWcbrbEIxVY" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/user/developer/Diploma_work",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\user\developer\Diploma_work\main" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\user\developer\Diploma_work\static\image" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Diploma_work" type="Python.DjangoServer" factoryName="Django server">
+      <module name="Diploma_work" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="DJANGO_SETTINGS_MODULE" value="Diploma_work.settings" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <option name="port" value="8000" />
+      <option name="host" value="" />
+      <option name="additionalOptions" value="" />
+      <option name="browserUrl" value="" />
+      <option name="runTestServer" value="false" />
+      <option name="runNoReload" value="false" />
+      <option name="useCustomRunCommand" value="false" />
+      <option name="customRunCommand" value="" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="5a584a5d-5cd2-4457-86cd-14ba258bdc9e" name="Changes" comment="" />
+      <created>1679588231325</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1679588231325</updated>
+      <workItem from="1679588267237" duration="1677000" />
+      <workItem from="1680099491374" duration="3162000" />
+      <workItem from="1680848553183" duration="631000" />
+      <workItem from="1681027716911" duration="811000" />
+      <workItem from="1683192835288" duration="3754000" />
+      <workItem from="1683217395449" duration="187000" />
+      <workItem from="1683263621525" duration="3755000" />
+      <workItem from="1683290073953" duration="4167000" />
+      <workItem from="1683346703429" duration="7308000" />
+      <workItem from="1683385377172" duration="3981000" />
+      <workItem from="1683396022500" duration="1176000" />
+      <workItem from="1683454613208" duration="5472000" />
+      <workItem from="1683469838249" duration="3317000" />
+      <workItem from="1683478964632" duration="2272000" />
+      <workItem from="1683552777165" duration="6452000" />
+      <workItem from="1683601901323" duration="2417000" />
+      <workItem from="1683632149429" duration="2499000" />
+      <workItem from="1683637280968" duration="2863000" />
+      <workItem from="1683645094594" duration="6660000" />
+      <workItem from="1683696764094" duration="9105000" />
+      <workItem from="1683723272517" duration="2014000" />
+      <workItem from="1683725327491" duration="7358000" />
+      <workItem from="1683777404345" duration="1704000" />
+      <workItem from="1683786583445" duration="1585000" />
+      <workItem from="1683817460295" duration="1002000" />
+      <workItem from="1683819404929" duration="3381000" />
+      <workItem from="1683896943683" duration="5397000" />
+      <workItem from="1683908551042" duration="1236000" />
+      <workItem from="1683948409637" duration="1799000" />
+      <workItem from="1683975882500" duration="6792000" />
+      <workItem from="1684040001441" duration="1907000" />
+      <workItem from="1684072389404" duration="103000" />
+      <workItem from="1684134526675" duration="609000" />
+      <workItem from="1684149870014" duration="843000" />
+      <workItem from="1684151526417" duration="1606000" />
+      <workItem from="1684156496918" duration="1118000" />
+      <workItem from="1684342222859" duration="3238000" />
+      <workItem from="1684402321402" duration="160000" />
+      <workItem from="1684414640198" duration="494000" />
+      <workItem from="1684517533590" duration="136000" />
+      <workItem from="1684746101321" duration="372000" />
+      <workItem from="1684822168434" duration="220000" />
+      <workItem from="1684925544915" duration="71000" />
+      <workItem from="1684925651442" duration="207000" />
+      <workItem from="1684929329754" duration="82000" />
+      <workItem from="1685010646712" duration="5237000" />
+      <workItem from="1685020643206" duration="4237000" />
+      <workItem from="1685034174147" duration="1903000" />
+      <workItem from="1685120418204" duration="1182000" />
+      <workItem from="1685158324902" duration="11959000" />
+      <workItem from="1685179236815" duration="4101000" />
+      <workItem from="1685183738898" duration="1411000" />
+      <workItem from="1685206473551" duration="703000" />
+      <workItem from="1685255821217" duration="766000" />
+      <workItem from="1685596810591" duration="71000" />
+      <workItem from="1685633239608" duration="2253000" />
+      <workItem from="1685688757227" duration="220000" />
+      <workItem from="1685701270059" duration="660000" />
+      <workItem from="1685970276695" duration="60000" />
+      <workItem from="1686037870471" duration="809000" />
+      <workItem from="1686048867859" duration="2395000" />
+      <workItem from="1686111890497" duration="2618000" />
+      <workItem from="1686120935305" duration="598000" />
+      <workItem from="1686203950691" duration="1087000" />
+      <workItem from="1686225661110" duration="542000" />
+      <workItem from="1686310555506" duration="66000" />
+      <workItem from="1686630285758" duration="2548000" />
+      <workItem from="1686647732778" duration="721000" />
+      <workItem from="1686657206125" duration="16000" />
+      <workItem from="1686722882270" duration="590000" />
+      <workItem from="1686829594942" duration="64000" />
+      <workItem from="1686833925116" duration="624000" />
+      <workItem from="1686910828462" duration="36000" />
+      <workItem from="1686920502754" duration="1394000" />
+      <workItem from="1686933898781" duration="74000" />
+      <workItem from="1687409411934" duration="677000" />
+      <workItem from="1687589436744" duration="146000" />
+      <workItem from="1691129620442" duration="191000" />
+      <workItem from="1691171675927" duration="17000" />
+      <workItem from="1692967643307" duration="352000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/main/models.py</url>
+          <line>33</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
