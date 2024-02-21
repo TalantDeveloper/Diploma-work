@@ -38,6 +38,11 @@ class Word(models.Model):
     def __str__(self):
         return self.context
 
+    def get_categories(self):
+        """Return a list of category names and count"""
+        titles = [category.name for category in self.categories.all()]
+        return {'count': self.categories.all().count(), 'titles': titles}
+
 
 class NotWord(models.Model):
     text = models.TextField()

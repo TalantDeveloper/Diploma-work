@@ -11,7 +11,7 @@ from modeltranslation.admin import TranslationAdmin
 
 @admin.register(Word)
 class WordAdmin(TranslationAdmin):
-    list_display = ('id', 'short', 'language', 'context')
+    list_display = ('id', 'short', 'language', 'context', 'get_categories')
     list_display_links = ('id', 'short', 'language', 'context')
 
     class Media:
