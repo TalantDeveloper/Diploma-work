@@ -59,6 +59,7 @@ def language_view(request, pk):
     }
     return render(request, 'main/index.html', context)
 
+
 def category_view(request, pk):
     category = Category.objects.get(id=pk)
     categories = Category.objects.all()

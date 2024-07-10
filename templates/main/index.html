@@ -39,84 +39,31 @@
                     </div>
                 </a>
             {% endfor %}
+            
             <!-- Pagination  -->
             <nav aria-label="Page navigation example">
-                {% if word_list.has_other_pages %}
-                    <ul class="pagination justify-content-center pagination-lg">
-                        {% if word_list.has_previous %}
-                            <li class="page-item"><a class="page-link" href="?page=1">1</a></li>
-                        {% endif %}
-                        {% if word_list.number|add:'-2' > 1 %}
-                            <li class="page-item">
-                                <a class="page-link" href="">&hellip;</a>
-                            </li>
-                            <li class="page-item">
-                                <a class="page-link" href="?page={{ word_list.number|add:'-2' }}">
-                                    {{ word_list.number|add:'-2' }}
-                                </a>
-                            </li>
-                        {% endif %}
-
-                        <!-- pagedan bitta orqa -->
-                        {% if word_list.number|add:'-1' > 1 %}
-                            <!-- pagedan ikkita orqa bo'lmasa ... chiqishi -->
-                            {% if not word_list.number|add:'-2' > 1 %}
-                                <li class="page-item">
-                                    <a class="page-link" href="">&hellip;</a>
-                                </li>
-                            {% endif %}
-                            <li class="page-item">
-                                <a class="page-link" href="?page={{ word_list.number|add:'-1' }}">
-                                    {{ word_list.number|add:'-1' }}
-                                </a>
-                            </li>
-                        {% endif %}
-
-                        <!-- page number -->
+                <ul class="pagination justify-content-center pagination-lg">
+                    {% if word_list.has_previous %}
                         <li class="page-item">
-                            <a class="page-link active" href="?page={{ word_list.number }}">
-                                {{ word_list.number }}
+                            <a class="page-link" href="?page={{ word_list.previous_page_number }}">
+                                <<
                             </a>
                         </li>
-
-                        <!-- Pagedan bitta keyingi -->
-                        {% if word_list.has_next %}
-                            <!-- Pagedan ikkita keyingi bo'lmasa ... chiqarish -->
-{#                            {% if not word_list.number|add:'1' < word_list.paginator.num_pages %}#}
-{#                                <li class="page-item">#}
-{#                                    <a class="page-link" href="">&hellip;</a>#}
-{#                                </li>#}
-{#                            {% endif %}#}
-                            <li class="page-item">
-                                <a class="page-link" href="?page={{ word_list.number|add:'1' }}">
-                                    {{ word_list.number|add:'1' }}
-                                </a>
-                            </li>
-
-
-                        {% endif %}
-
-                        <!-- Pagedan ikkita keyingi bo'lsa -->
-                        {% if word_list.number|add:'2' < word_list.paginator.num_pages %}
-                            <li class="page-item">
-                                <a class="page-link" href="?page={{ word_list.number|add:'2' }}">
-                                    {{ word_list.number|add:'2' }}
-                                </a>
-                            </li>
-                            <li class="page-item">
-                                <a class="page-link" href="">&hellip;</a>
-                            </li>
-
-                        {% endif %}
-                        {% if word_list.number|add:'1' != word_list.paginator.num_pages %}
-                            <li class="page-item">
-                                <a class="page-link" href="?page={{ word_list.paginator.num_pages }}">
-                                    {{ word_list.paginator.num_pages }}
-                                </a>
-                            </li>
-                        {% endif %}
-                    </ul>
-                {% endif %}
+                    {% endif %}
+                    <li class="page-item">
+                        <a class="page-link" href="?page={{ word_list.number }}">
+                            {{ word_list.number }}
+                        </a>
+                    </li>
+                    <!-- pagedan bitta orqa -->
+                    {% if word_list.has_next %}
+                        <li class="page-item">
+                            <a class="page-link" href="?page={{ word_list.next_page_number }}">
+                                >>
+                            </a>
+                        </li>
+                    {% endif %}
+                </ul>
             </nav>
         </div>
         <!-- Column large 3. Categories and Languages-->
